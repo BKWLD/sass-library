@@ -1,0 +1,41 @@
+/**
+ * A base set of styles designed to be applied to containers
+ * of database driven content that was populated through
+ * CKEditor (or, convievably, another WYSIWYG editor)
+ */
+@mixin wysiwyg {
+	
+	// Add standard double line break for these
+	p, ul, ol {
+		margin: 1em auto;
+	}
+
+	// Make bold work
+	b, strong {
+		font-weight: 800;
+	}
+
+	// Make lists work again
+	// Based on http://stackoverflow.com/a/11737351/59160
+	$margin: 2em;
+	ul { 
+		list-style-type: disc; 
+		list-style-position: inside;
+		margin-left: $margin;
+	}
+	ol { 
+		list-style-type: decimal; 
+		list-style-position: inside;
+		margin-left: $margin;
+	}
+	ul ul, ol ul { 
+		list-style-type: circle; 
+		list-style-position: inside;
+		margin: 0 auto 0 $margin;
+	}
+	ol ol, ul ol { 
+		list-style-type: decimal; // Another option might be "lower-latin" 
+		list-style-position: inside; 
+		margin: 0 auto 0 $margin;
+	}
+}
