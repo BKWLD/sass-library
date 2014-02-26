@@ -1,0 +1,23 @@
+{
+  "name": "sass-library",
+  "version": "0.1.0",
+  "homepage": "https://github.com/BKWLD/sass-library",
+  "authors": [
+    "Robert Reinhard <info@bkwld.com>",
+    "Matt Aebersold <info@bkwld.com>",
+    "Dan Rogers <info@bkwld.com>"
+  ],
+  "description": "Sass utility mixins",
+  "keywords": [
+    "bkwld",
+    "sass",
+    "scss",
+    "utils"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "README.md"
+  ]
+}
