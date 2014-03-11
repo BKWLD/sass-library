@@ -15,6 +15,11 @@
 		font-weight: 800;
 	}
 
+	// Make italic work
+	i, em {
+		font-style: italic;
+	}
+
 	// Make lists work again
 	// Based on http://stackoverflow.com/a/11737351/59160
 	$margin: 2em;
