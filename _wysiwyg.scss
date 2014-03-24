@@ -6,7 +6,7 @@
 @mixin wysiwyg {
 	
 	// Add standard double line break for these
-	p, ul, ol {
+	ul, ol {
 		margin: 1em auto;
 	}
 
