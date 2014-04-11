@@ -3,7 +3,7 @@
  * referrenced HTCs are already in the css directory.
  */
 @mixin pie {
-	behavior: stylesheet-url('pie.htc');
+	-ms-behavior: stylesheet-url('pie.htc');
 }
 
 @mixin box-sizing-ie($type) {
