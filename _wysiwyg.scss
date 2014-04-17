@@ -43,4 +43,13 @@
 		list-style-position: inside; 
 		margin: 0 auto 0 $margin;
 	}
+
+	// Blockquote styles
+	// These are as generic as possible here. Any specific
+	// blockquote styles will be in the project's sass
+	blockquote {
+		width: 80%;
+		margin: 20px auto;
+		display: block;
+	}
 }
