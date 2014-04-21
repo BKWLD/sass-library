@@ -22,25 +22,25 @@
 
 	// Make lists work again
 	// Based on http://stackoverflow.com/a/11737351/59160
-	$margin: 2em;
+	$margin: 2.3em;
 	ul { 
 		list-style-type: disc; 
-		list-style-position: inside;
+		list-style-position: outside;
 		margin-left: $margin;
 	}
 	ol { 
 		list-style-type: decimal; 
-		list-style-position: inside;
+		list-style-position: outside;
 		margin-left: $margin;
 	}
 	ul ul, ol ul { 
 		list-style-type: circle; 
-		list-style-position: inside;
+		list-style-position: outside;
 		margin: 0 auto 0 $margin;
 	}
 	ol ol, ul ol { 
 		list-style-type: decimal; // Another option might be "lower-latin" 
-		list-style-position: inside; 
+		list-style-position: outside; 
 		margin: 0 auto 0 $margin;
 	}
 
