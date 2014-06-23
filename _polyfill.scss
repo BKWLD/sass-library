@@ -16,10 +16,17 @@
 	@include pie-clearfix;
 }
 
+// Support background cover in < IE9
 @mixin background-size-ie($type) {
 	@include background-size($type);
-	-ms-behavior: stylesheet-url('backgroundsize.htc');
+
+	// Quarantine in this selector because otherwise it was running
+	// in IE9 which actually DOES support background-size
+	.lt-ie9 & {
+		-ms-behavior: stylesheet-url('backgroundsize.htc');
+	}
 }
+
 
 // Fix text text being clipped without adjusting line height
 // http://stackoverflow.com/a/699659/59160
