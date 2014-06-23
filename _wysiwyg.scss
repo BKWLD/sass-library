@@ -52,4 +52,10 @@
 		margin: 20px auto;
 		display: block;
 	}
+
+	//images need a height: auto so they can maintain their aspect ratio if they
+	// have their width set to 100%
+	img {
+		height: auto;
+	}
 }
