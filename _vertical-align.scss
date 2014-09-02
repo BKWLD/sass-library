@@ -2,14 +2,21 @@
  * Vertical align using psuedo elements
  * See: http://css-tricks.com/centering-in-the-unknown/
  */
+
+// add this to the containing 
+// div of the items to be centered
 @mixin vertical-align() {
 	&:before {
 		content: '';
 		display: inline-block;
 		height: 100%;
 		vertical-align: middle;
-
-		// Not sure this is needed
-		// margin-right: -0.25em; /* Adjusts for spacing */
 	}
+}
+
+// add this to the actual block
+//of content you want centered
+@mixin vert-align-content() {
+	display: inline-block;
+	vertical-align: middle;
 }
