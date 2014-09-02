@@ -27,6 +27,15 @@
 	}
 }
 
+// Helper mixin that uses background-size-ie, and also no-repeats
+// and centers the background image
+// usage: @include cover;
+@mixin cover() {
+	@include background-size-ie('cover');
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
 
 // Fix text text being clipped without adjusting line height
 // http://stackoverflow.com/a/699659/59160
