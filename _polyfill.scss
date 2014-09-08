@@ -31,7 +31,7 @@
 // and centers the background image
 // usage: @include cover;
 @mixin cover() {
-	@include background-size-ie('cover');
+	@include background-size-ie(cover);
 	background-position: center center;
 	background-repeat: no-repeat;
 }
