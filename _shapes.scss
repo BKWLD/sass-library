@@ -1,0 +1,27 @@
+/**
+ * Make a border-radius based circle in CSS
+ */
+@mixin circle($size, $color: '') {
+	@include rectangle($size, $size, $color, $size/2);
+}
+
+/**
+ * Make a square in CSS
+ */
+@mixin square($size, $color: '', $radius: '') {
+	@include rectangle($size, $size, $color, $radius);
+}
+
+/**
+ * Make a rectangle in CSS in one line
+ */
+@mixin rectangle($width, $height, $color: '', $radius: '') {
+	width: $width;
+	height: $height;
+	@if($color) {
+		background-color: $color;
+	}
+	@if($radius) {
+		@include border-radius($radius);
+	}
+}
