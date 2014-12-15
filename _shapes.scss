@@ -18,10 +18,10 @@
 @mixin rectangle($width, $height, $color: '', $radius: '') {
 	width: $width;
 	height: $height;
-	@if($color) {
+	@if($color != '') {
 		background-color: $color;
 	}
-	@if($radius) {
+	@if($radius != '') {
 		@include border-radius($radius);
 	}
 }
