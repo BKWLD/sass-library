@@ -3,7 +3,8 @@
  * - Hovers are disabled
  * - If $active is true, the standard hover effect is used for active
  *
- * Requires Modernizr to set the no-touch class on html
+ * Requires Modernizr to set the no-touch class on html.  Thus, at least:
+ * http://modernizr.com/download/#-touch-cssclasses-teststyles-prefixes
  * 
  * Ex:
  * 	 @include hover { color: red }
