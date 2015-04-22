@@ -5,8 +5,8 @@
  */
 
 // Deprecated API
-@mixin vertical-align($with-children:false) { @include psuedo-v-align($with-children); }
-@mixin psuedo-v-align-content-align { @include psuedo-v-align-content; }
+@mixin vertical-align($with-children:false) { @include psuedo-v-center($with-children); }
+@mixin psuedo-v-align-content-align { @include psuedo-v-center-content; }
 
 
 /**
@@ -22,22 +22,22 @@
  * 	
  */
 
-// Vertical align
-@mixin tranform-v-align {
+// Vertical align center
+@mixin v-center {
 	position: absolute;
 	top: 50%;
 	@include translate-y(-50%);
 }
 
-// Horizontal align
-@mixin tranform-h-align {
+// Horizontal align center
+@mixin h-center {
 	position: absolute;
 	left: 50%;
 	@include translate-x(-50%);
 }
 
-// Both vertical and horizontal align
-@mixin tranform-center {
+// Both vertical and horizontal align center
+@mixin center {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -51,7 +51,7 @@
  */
 
 // Add this to the containing div of the items to be centered
-@mixin psuedo-v-align($with-children:false) {
+@mixin psuedo-v-center($with-children:false) {
 	&:before {
 		content: '';
 		display: inline-block;
@@ -68,7 +68,7 @@
 }
 
 // Add this to the actual block of content you want centered
-@mixin psuedo-v-align-content {
+@mixin psuedo-v-center-content {
 	display: inline-block;
 	vertical-align: middle;
 }
