@@ -1,0 +1,74 @@
+/**
+ * -----------------------------------------------------------------------------
+ * Utils for horizontally and vertically centering elements
+ * -----------------------------------------------------------------------------
+ */
+
+// Deprecated API
+@mixin vertical-align($with-children:false) { @include psuedo-v-align($with-children); }
+@mixin psuedo-v-align-content-align { @include psuedo-v-align-content; }
+
+
+/**
+ * Align using transform technique.  It's expected that the parent is not
+ * position static.  Does not work in IE8
+ * 
+ * http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/
+ * http://davidwalsh.name/css-vertical-center
+ *
+ * Note, if parent is blurry, add to parent:
+ * 
+ * 		@include  transform-style(preserve-3d);
+ * 	
+ */
+
+// Vertical align
+@mixin tranform-v-align {
+	position: absolute;
+	top: 50%;
+	@include translate-y(-50%);
+}
+
+// Horizontal align
+@mixin tranform-h-align {
+	position: absolute;
+	left: 50%;
+	@include translate-x(-50%);
+}
+
+// Both vertical and horizontal align
+@mixin tranform-center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	@include translate(-50%, -50%);
+}
+
+/**
+ * Vertical align using psuedo elements.  Works in IE8
+ * 
+ * See: http://css-tricks.com/centering-in-the-unknown/
+ */
+
+// Add this to the containing div of the items to be centered
+@mixin psuedo-v-align($with-children:false) {
+	&:before {
+		content: '';
+		display: inline-block;
+		height: 100%;
+		vertical-align: middle;
+	}
+
+	// Make the contents vertically aligned
+	@if($with-children) {
+		> * {
+			@include vert-align-content;
+		}
+	}
+}
+
+// Add this to the actual block of content you want centered
+@mixin psuedo-v-align-content {
+	display: inline-block;
+	vertical-align: middle;
+}
