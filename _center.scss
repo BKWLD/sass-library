@@ -62,7 +62,7 @@
 	// Make the contents vertically aligned
 	@if($with-children) {
 		> * {
-			@include vert-align-content;
+			@include psuedo-v-center-content;
 		}
 	}
 }
