@@ -29,19 +29,21 @@
 	@include translateY(-50%);
 }
 
-// Horizontal align center
+// Horizontal align center. Positioning based on the right to fix IE issue
+// that can create horizontal scrolling
+// http://stackoverflow.com/a/27990348/59160
 @mixin h-center {
 	position: absolute;
-	left: 50%;
-	@include translateX(-50%);
+	right: 50%;
+	@include translateX(50%);
 }
 
 // Both vertical and horizontal align center
 @mixin center {
 	position: absolute;
 	top: 50%;
-	left: 50%;
-	@include translate(-50%, -50%);
+	right: 50%;
+	@include translate(50%, -50%);
 }
 
 /**
