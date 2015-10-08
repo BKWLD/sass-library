@@ -1,0 +1,29 @@
+/**
+ * Add styles to make something button like
+ *
+ * css-property $property Add a transition for this property
+ *
+ * Example:
+ *
+ * 		@include button(background) {
+ *			background: darken($purple, 10%);
+ * 		}
+ */
+@mixin button($property:'') {
+	display: inline-block;
+	cursor: pointer;
+	@include user-select(none);
+	outline: 0;
+
+	// Disable user agent stuff
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+
+	// Add a hover animation
+	@if $property != '' {
+		@include transition($property 300ms);
+		&:hover, &:active {
+			@include transition($property 100ms);
+			@content;
+		}
+	}
+}
